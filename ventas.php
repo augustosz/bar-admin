@@ -2,48 +2,18 @@
 include 'db.php';
 include 'sidebar.php';
 
+session_start(); // Iniciar la sesión
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php'); // Redirigir al login si no ha iniciado sesión
+    exit();
+}
+
 $ventasQuery = $pdo->query("SELECT * FROM ventas");
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local de Bebidas - Panel Principal</title>
-  
-  <style>
-    /* Estilos para la barra lateral */
-    .sidebar {
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #343a40;
-      padding-top: 20px;
-      width: 250px;
-    }
-
-    .sidebar a {
-      color: white;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .sidebar a:hover {
-      background-color: #575d63;
-    }
-
-    .content {
-      margin-left: 260px;
-      padding: 20px;
-    }
-  </style>
-</head>
-
-<body>
 
 
   <!-- Contenido principal -->
@@ -77,7 +47,7 @@ $ventasQuery = $pdo->query("SELECT * FROM ventas");
 
   
 
-</body>
+
 
 </html>
 
