@@ -43,7 +43,7 @@ $total_proveedores = $row_proveedores['total'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local de Bebidas - Panel Principal</title>
-  
+
   <style>
     /* Estilos para la barra lateral */
     .sidebar {
@@ -71,6 +71,17 @@ $total_proveedores = $row_proveedores['total'];
       margin-left: 260px;
       padding: 20px;
     }
+
+    body {
+      background-image: url('img/background.webp');
+      /* Reemplaza con la ruta a tu imagen */
+      background-size: cover;
+      /* Hace que la imagen cubra toda la pantalla */
+      background-position: center;
+      /* Centra la imagen */
+      background-repeat: no-repeat;
+      /* Evita que la imagen se repita */
+    }
   </style>
 </head>
 
@@ -80,79 +91,79 @@ $total_proveedores = $row_proveedores['total'];
   <div class="content">
     <h1 class="text-center mb-4">Panel Principal - Local de Bebidas</h1>
     <div class="container mt-5">
-        <div class="row">
-            <!-- Card 1 - Ventas -->
-            <div class="col-md-4">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Ventas</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Total de Ventas</h5>
-                        <p class="card-text"><?php echo $total_ventas; ?> ventas registradas.</p>
-                    </div>
-                </div>
+      <div class="row">
+        <!-- Card 1 - Ventas -->
+        <div class="col-md-4">
+          <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Ventas</div>
+            <div class="card-body">
+              <h5 class="card-title">Total de Ventas</h5>
+              <p class="card-text"><?php echo $total_ventas; ?> ventas registradas.</p>
             </div>
-
-            <!-- Card 2 - Productos -->
-            <div class="col-md-4">
-                <div class="card text-white bg-success mb-3">
-                    <div class="card-header">Productos</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Total de Productos</h5>
-                        <p class="card-text"><?php echo $total_productos; ?> productos en inventario.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 - Alertas -->
-            <div class="col-md-4">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-header">Alertas</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Productos en Bajo Stock</h5>
-                        <p class="card-text"><?php echo $total_alertas; ?> productos con bajo stock.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 - Empleados -->
-            <div class="col-md-4">
-                <div class="card text-white bg-warning mb-3">
-                    <div class="card-header">Empleados</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Total de Empleados</h5>
-                        <p class="card-text"><?php echo $total_empleados; ?> empleados en la nómina.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 - Clientes -->
-            <div class="col-md-4">
-                <div class="card text-white bg-info mb-3">
-                    <div class="card-header">Clientes</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Total de Clientes</h5>
-                        <p class="card-text"><?php echo $total_clientes; ?> clientes registrados.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 - Proveedores -->
-            <div class="col-md-4">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header">Proveedores</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Total de Proveedores</h5>
-                        <p class="card-text"><?php echo $total_proveedores; ?> proveedores registrados.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Card 2 - Productos -->
+        <div class="col-md-4">
+          <div class="card text-white bg-success mb-3">
+            <div class="card-header">Productos</div>
+            <div class="card-body">
+              <h5 class="card-title">Total de Productos</h5>
+              <p class="card-text"><?php echo $total_productos; ?> productos en inventario.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 - Alertas -->
+        <div class="col-md-4">
+          <div class="card text-white bg-danger mb-3">
+            <div class="card-header">Alertas</div>
+            <div class="card-body">
+              <h5 class="card-title">Productos en Bajo Stock</h5>
+              <p class="card-text"><?php echo $total_alertas; ?> productos con bajo stock.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Empleados -->
+        <div class="col-md-4">
+          <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Empleados</div>
+            <div class="card-body">
+              <h5 class="card-title">Total de Empleados</h5>
+              <p class="card-text"><?php echo $total_empleados; ?> empleados en la nómina.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 - Clientes -->
+        <div class="col-md-4">
+          <div class="card text-white bg-info mb-3">
+            <div class="card-header">Clientes</div>
+            <div class="card-body">
+              <h5 class="card-title">Total de Clientes</h5>
+              <p class="card-text"><?php echo $total_clientes; ?> clientes registrados.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 - Proveedores -->
+        <div class="col-md-4">
+          <div class="card text-white bg-dark mb-3">
+            <div class="card-header">Proveedores</div>
+            <div class="card-body">
+              <h5 class="card-title">Total de Proveedores</h5>
+              <p class="card-text"><?php echo $total_proveedores; ?> proveedores registrados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    
+
   </div>
 
-  
+
 
 </body>
 
